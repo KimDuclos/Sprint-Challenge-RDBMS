@@ -15,7 +15,7 @@ router.get('/projects', async (req, res) => {
 });
 
 // POST
-router.post('projects/', async (req, res) => {
+router.post('/projects', async (req, res) => {
   const project_data = req.body;
   console.log(req.body);
   if (!project_data.name || !project_data.description) {
