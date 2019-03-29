@@ -3,7 +3,7 @@ exports.seed = function(knex, Promise) {
     return knex('project')
       .del()
       .then(function() {
-        // Inserts seeds
+        // Insert seeds
         return knex('project').insert([
           {
             id: 1,

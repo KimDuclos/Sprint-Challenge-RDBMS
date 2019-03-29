@@ -8,12 +8,11 @@ exports.up = function(knex, Promise) {
       tbl.text('notes');
       tbl.boolean('completed').defaultTo(false);
   
-      tbl
-        .integer('project_id')
-        .unsigned()
-        .references('id')
-        .inTable('projects')
-        .notNullable();
+      tbl.integer('project_id')
+         .unsigned()
+         .references('id')
+         .inTable('projects')
+         .notNullable();
   
       tbl.timestamps(true, true);
     });

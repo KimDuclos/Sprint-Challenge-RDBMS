@@ -1,21 +1,23 @@
 exports.seed = function(knex, Promise) {
-    // Deletes ALL existing entries
+    // Delete existing
     return knex('action')
       .del()
       .then(function() {
-        // Inserts seed entries
+        // Insert seeds
         return knex('action').insert([
           {
             id: 1,
             description: '30 minute loop with Lars the doggo.',
             notes:
-              "Let him sniff all the things and bark at all the bikes.",
+              'Let him sniff all the things and bark at all the bikes.',
             completed: false, 
             fk: 1
           },
           { id: 2, 
             description: 'Get suitcase out of closet', 
-            completed: false, fk: 2 },
+            completed: false, 
+            fk: 2 
+          },
           {
             id: 3,
             description: 'Let cats sit in suitcase and pout about me leaving.',
@@ -45,7 +47,7 @@ exports.seed = function(knex, Promise) {
           },
           { 
             id: 8, 
-            description: 'Forget something', 
+            description: 'Forget something.', 
             completed: false, fk: 2 },
           { 
             id: 9, 
